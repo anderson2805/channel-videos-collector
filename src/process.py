@@ -15,8 +15,9 @@ from utils.processing_utils import process_captions
 # from langchain_text_splitters import TokenTextSplitter
 import concurrent.futures
 global service, api_list
-api_file = open("./data/yt_secret.txt", "r")
-apis = api_file.read()
+# api_file = open("./data/yt_secret.txt", "r")
+# apis = api_file.read()
+apis = st.secrets["keys"]
 api_list = apis.split("\n")
 API_KEY = api_list.pop()
 api_list = [API_KEY] + api_list

@@ -2,12 +2,13 @@
 import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
+import streamlit as st
 
 from src.service import create_yt_service
 from pytubefix import Channel
-api_file = open("./data/yt_secret.txt", "r")
-apis = api_file.read()
+# api_file = open("./data/yt_secret.txt", "r")
+# apis = api_file.read()
+apis = st.secrets["keys"]
 api_list = apis.split("\n")
 API_KEY = api_list.pop()
 api_list = [API_KEY] + api_list
