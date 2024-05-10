@@ -11,12 +11,12 @@ ss = st.session_state
 
 st.set_page_config(
     layout="wide",
-    page_title="YT Videos Collector",
-    page_icon="⛏️",
+    page_title="🔍Channel Videos Finder",
+    page_icon="🔍",
 
 )
 
-st.markdown("# YT Channel Videos Collector⛏️")
+st.markdown("# 🔍Channel Videos Finder")
 
 
 channels_input = st.text_area(label = "Enter list of channels (recommended 5 at a time), seperated by newlines:")
